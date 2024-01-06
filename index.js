@@ -526,60 +526,60 @@
 
 //****Post API with Mongooso ****/
 
-const express = require('express');
-require("./config");
-const product = require("./product");
-const app = express();
+// const express = require('express');
+// require("./config");
+// const product = require("./product");
+// const app = express();
 
-app.use(express.json())
+// app.use(express.json())
 
-app.post("/create", async (req, resp) => {
-    try {
-        let data = new product(req.body);
-        let result = await data.save();
-        console.log("result", result);
-        resp.send(result);
-    } catch (error) {
-        console.error("Error creating product:", error);
-        resp.status(500).send("Internal Server Error");
-    }
-});
+// app.post("/create", async (req, resp) => {
+//     try {
+//         let data = new product(req.body);
+//         let result = await data.save();
+//         console.log("result", result);
+//         resp.send(result);
+//     } catch (error) {
+//         console.error("Error creating product:", error);
+//         resp.status(500).send("Internal Server Error");
+//     }
+// });
 
 
 
 // GET API
 
 
-app.get("/v1/list", async (req, resp) => {
-    let data = await product.find();
-    resp.send(data)
-})
+// app.get("/v1/list", async (req, resp) => {
+//     let data = await product.find();
+//     resp.send(data)
+// })
 
 
 // DELETE API
 
-app.delete("/delete/:_id", async (req, resp) => {
-    console.log(req.params);
-    let data = await product.deleteOne(req.params);
-    resp.send(data)
-})
+// app.delete("/delete/:_id", async (req, resp) => {
+//     console.log(req.params);
+//     let data = await product.deleteOne(req.params);
+//     resp.send(data)
+// })
 
 
 // UPDATE API
 
-app.put("/update/:_id", async (req, resp) => {
-    console.log(req.params);
-    let data = await product.updateOne(
-        req.params,
-        {
-            $set : req.body
-        }
-    );
-    resp.send(data);
-    console.log(data)
-})
+// app.put("/update/:_id", async (req, resp) => {
+//     console.log(req.params);
+//     let data = await product.updateOne(
+//         req.params,
+//         {
+//             $set : req.body
+//         }
+//     );
+//     resp.send(data);
+//     console.log(data)
+// })
 
-app.listen(4000)
+// app.listen(4000)
 
 
 
