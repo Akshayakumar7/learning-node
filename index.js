@@ -588,3 +588,127 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------
+
+// Search API in Node js with MOngoDB
+
+
+
+// const express = require('express');
+// require("./config");
+// const product = require("./product");
+// const app = express();
+
+
+// app.use(express.json());
+
+// app.get("/search/:key", async (req, resp) => {
+//     let data = await product.find(
+//         {
+//             "$or": [
+//                 { "name": { $regex: req.params.key } },
+//                 { "brand": { $regex: req.params.key } }
+
+
+//             ]
+//         }
+//     );
+//     resp.send(data)
+// })
+
+// app.listen(4000)
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------
+
+//Upload file in Node js
+
+
+// const express = require("express");
+// const multer = require("multer");
+// const app = express();
+
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, "uploads");
+//     },
+//     filename: function (req, file, cb) {
+//         console.log("file", file);
+//         cb(null, file.fieldname + "-" + Date.now() + ".jpg");
+//     },
+// });
+
+// const upload = multer({ storage: storage }).single("user_file");
+
+// app.post("/upload", upload, (req, resp) => {
+//     resp.send("file upload");
+// });
+
+// app.listen(4000, () => {
+//     console.log("Server is running on port 4000");
+// });
+
+
+
+//----------------------------------------------------------------------------------------------
+
+// OS module in Node js
+
+
+// const os = require("os");
+
+// console.log(os.arch());
+// console.log(os.freemem()/(1024*1024*1024));
+// console.log(os.totalmem()/(1024*1024*1024));
+
+// console.log(os.hostname());
+
+// console.log(os.platform());
+
+// console.log(os.userInfo());
+
+
+
+
+//----------------------------------------------------------------------------------------------
+
+//Events and Event Emitter in Node js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
